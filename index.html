@@ -242,11 +242,12 @@
 
             rss:{
                 urls: ['https://medium.com/feed/@Robingood'], //Array: Specifiy a list of rss feed from which to pull posts
-                limit: 2                                      //Integer: max number of posts to load for each url
+                limit: 4,
+                template: "partials/template-rss.html"
             },
             // GENERAL SETTINGS
             length:400,
-            template: "partials/template.html",                                       //Integer: For posts with text longer than this length, show an ellipsis.
+            template: "partials/template.html" //Integer: For posts with text longer than this length, show an ellipsis.
         });
     });
 </script>
