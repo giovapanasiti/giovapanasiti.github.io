@@ -6253,6 +6253,9 @@ html body {
       margin: 0;
       z-index: 1; }
 
+h3 {
+  font-size: 4rem; }
+
 .Aligner {
   display: flex;
   align-items: center;
