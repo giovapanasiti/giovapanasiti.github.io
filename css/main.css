@@ -6250,6 +6250,20 @@ html body {
       padding: 0;
       margin: 0; }
 
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.Aligner-item {
+  max-width: 50%; }
+
+.Aligner-item--top {
+  align-self: flex-start; }
+
+.Aligner-item--bottom {
+  align-self: flex-end; }
+
 .background {
   height: 600px; }
 
