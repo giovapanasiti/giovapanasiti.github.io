@@ -6294,6 +6294,13 @@ h3 {
   font-size: 5rem;
   color: white; }
 
+.section-heading h4 {
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  color: white; }
+
 .section-heading .socials {
   font-size: 5rem;
   color: white; }
