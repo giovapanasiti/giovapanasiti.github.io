@@ -19,6 +19,8 @@
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Social-feed css -->
+    <link href="bower_components/social-feed/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
     <!-- Theme CSS -->
     <link href="css/main.css" rel="stylesheet">
 
@@ -149,6 +151,22 @@
         </div>
     </section>
 
+    <section id="tweets" class="tweets">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="section-heading">
+                        <h1>My Latest Tweets</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="social-feed-container"></div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2016 Giovanni Panasiti. All Rights Reserved. Hosted on <a href="https://pages.github.com/">Github pages</a></p>
@@ -192,6 +210,37 @@
     <script src="js/main.js"></script>
 
     <script src="js/navbar.js"></script>
+
+    <!-- Codebird.js - required for TWITTER -->
+    <script src="bower_components/codebird-js/codebird.js"></script>
+    <!-- doT.js for rendering templates -->
+    <script src="bower_components/doT/doT.min.js"></script>
+    <!-- Moment.js for showing "time ago" and/or "date"-->
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <!-- Moment Locale to format the date to your language (eg. italian lang)-->
+    <script src="bower_components/moment/locale/it.js"></script>
+    <!-- Social-feed js -->
+    <script src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $('.social-feed-container').socialfeed({
+            // INSTAGRAM
+            instagram:{
+                twitter:{
+                accounts: ['@giovapanasiti'],                      //Array: Specify a list of accounts from which to pull tweets
+                limit: 12,                                   //Integer: max number of tweets to load
+                consumer_key: 'lw5wbxUU26TnhWjnEnY6JBkb9',          //String: consumer key. make sure to have your app read-only
+                consumer_secret: 'hKBqdltpKk2GrvIddsos0fsWFArFeSxTx6YqXovUuFd0sqx7RM' //String: consumer secret key. make sure to have your app read-only
+             }
+            },
+
+            // GENERAL SETTINGS
+            length:400,
+            template: "partials/template.html",                                       //Integer: For posts with text longer than this length, show an ellipsis.
+        });
+    });
+</script>
 
 </body>
 
