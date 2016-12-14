@@ -246,13 +246,13 @@
             },
             // GENERAL SETTINGS
             length:400,
-            function() {
+            template: function() {
                 if (social_network == 'rss')
-                return 'template: "partials/template.html"'; //Integer: For posts with text longer than this length, show an ellipsis.
+                return '"partials/template.html"'; //Integer: For posts with text longer than this length, show an ellipsis.
                 else
-                return 'template: "partials/template-rss.html"';
+                return '"partials/template-rss.html"';
 
-            }()
+            }
     });
 </script>
 
