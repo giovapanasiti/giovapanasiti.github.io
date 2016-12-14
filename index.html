@@ -229,6 +229,13 @@
 
     <script>
     $(document).ready(function(){
+        var check_name = function(it) {
+                if (it.social_network == 'rss') {
+                    return 'partials/template.html'; //Integer: For posts with text longer than this length, show an ellipsis.
+                } else {
+                    return 'partials/template-rss.html';
+                };
+             }
         $('.social-feed-container').socialfeed({
             // INSTAGRAM
             
@@ -246,13 +253,9 @@
             },
             // GENERAL SETTINGS
             length:400,
-            template: function(it) {
-                if (it.social_network == 'rss') {
-                    return 'partials/template.html'; //Integer: For posts with text longer than this length, show an ellipsis.
-                } else {
-                    return 'partials/template-rss.html';
-                };
-             }(),
+            template: check_name(it),
+            
+            
         });
     });
 </script>
