@@ -240,22 +240,14 @@
              
             },
 
-            rss:{
-                urls: ['https://medium.com/feed/@Robingood'], //Array: Specifiy a list of rss feed from which to pull posts
-                limit: 4,
-            },
+            // rss:{
+            //     urls: ['https://medium.com/feed/@Robingood'], //Array: Specifiy a list of rss feed from which to pull posts
+            //     limit: 4,
+            // },
             // GENERAL SETTINGS
             length:400,
             
-            template: function(Feed) {
-                if (Feed.social_network == 'rss') {
-                    return '"partials/template.html"'; //Integer: For posts with text longer than this length, show an ellipsis.
-                }
-                else {
-                    return '"partials/template-rss.html"';
-                }
-
-            }(),
+            template: "partials/template.html"
     });
 </script>
 
