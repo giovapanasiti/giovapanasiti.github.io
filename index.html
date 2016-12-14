@@ -240,29 +240,13 @@
              
             },
 
-            // rss:{
-            //     urls: ['https://medium.com/feed/@Robingood'], //Array: Specifiy a list of rss feed from which to pull posts
-            //     limit: 4,
-            //     template: "partials/template-rss.html"
-            // },
-            // GENERAL SETTINGS
-            length:400,
-            template: "partials/template.html" //Integer: For posts with text longer than this length, show an ellipsis.
-        });
-    });
-</script>
-
-<script>
-    $(document).ready(function(){
-        $('.social-feed-container').socialfeed({
-
             rss:{
                 urls: ['https://medium.com/feed/@Robingood'], //Array: Specifiy a list of rss feed from which to pull posts
                 limit: 4,
             },
             // GENERAL SETTINGS
             length:400,
-            template: "partials/template-rss.html" //Integer: For posts with text longer than this length, show an ellipsis.
+            template: "partials/template.html" //Integer: For posts with text longer than this length, show an ellipsis.
         });
     });
 </script>
