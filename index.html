@@ -246,8 +246,9 @@
             },
             // GENERAL SETTINGS
             length:400,
-            template: function(social_network) {
-                if (social_network == 'rss') {
+            
+            template: function(Feed) {
+                if (Feed.social_network == 'rss') {
                     return '"partials/template.html"'; //Integer: For posts with text longer than this length, show an ellipsis.
                 }
                 else {
