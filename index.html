@@ -229,13 +229,7 @@
 
     <script>
     $(document).ready(function(){
-        var check_name = function(it) {
-                if (it.social_network == 'rss') {
-                    return 'partials/template.html'; //Integer: For posts with text longer than this length, show an ellipsis.
-                } else {
-                    return 'partials/template-rss.html';
-                };
-             }
+
         $('.social-feed-container').socialfeed({
             // INSTAGRAM
             
@@ -247,13 +241,13 @@
              
             },
 
-            rss:{
-                urls: ['https://medium.com/feed/@Robingood'], //Array: Specifiy a list of rss feed from which to pull posts
-                limit: 4,
-            },
+            // rss:{
+            //     urls: ['https://medium.com/feed/@Robingood'], //Array: Specifiy a list of rss feed from which to pull posts
+            //     limit: 4,
+            // },
             // GENERAL SETTINGS
             length:400,
-            template: check_name(it),
+            template: 'partials/template.html',
             
             
         });
